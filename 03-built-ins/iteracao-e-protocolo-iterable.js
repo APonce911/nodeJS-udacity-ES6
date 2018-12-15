@@ -25,39 +25,45 @@ const james = {
 };
 // console.log(typeof james)
 
-// const jamesKeys = Object.keys(james)
 // console.log(jamesKeys);
 
-james[Symbol.iterator] = function* () {
-    var key;
-    for (key in this) {
-        yield this[key];
-    }
-};
+// james[Symbol.iterator] = function* () {
+//     var key;
+//     for (key in this) {
+//         yield this[key];
+//     }
+// };
 // console.log(typeof james[Symbol.iterator])
 
 
 
 // console.log([Symbol.iterator]);
 // console.log(iterator);
-const iterator = james[Symbol.iterator]();
-console.log(iterator.next().value); // 'James'
-console.log(iterator.next().value); // `5'10`
-console.log(iterator.next().value); // 185
-
-// james[Symbol.iterator] = function* () {
-//     var nextIndex = 0;
-//     var key;
-
-//     return {
-//        next: function() {
-//            return nextIndex < array.length ?
-//                {key: key, value: this[key], done: false} :
-//                {done: true};
-//        }
-//     };
-// };
-// console.log(james.count);
 // const iterator = james[Symbol.iterator]();
-// console.log(iterator.next()); // `5'10`
-// console.log(iterator.next()); // 185
+
+let iterator = {
+  james: {
+      name: 'James',
+      height: `5'10"`,
+      weight: 185
+  },
+  keys: Object.keys(this.james),
+  count:0,
+
+  next: function () {
+    var key;
+     if (true) {
+        return {key:"teste", value: this.james["name"], done: false};
+     } else {
+        return {done:true};
+     }
+ }
+};
+// console.log(james.count);
+// const jamesKeys = Object.keys(iterator.james);
+console.log(iterator.keys); // 'James'
+console.log(iterator.next()); // 185
+console.log(iterator.next()); // `5'10`
+console.log(iterator.next()); // 185
+console.log(iterator.next()); // 185
+  // jamesKeys: this.james.keys,
