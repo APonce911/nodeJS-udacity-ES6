@@ -31,13 +31,14 @@
 //   count:0,
 
 //   next: function () {
-//     if (this.count < this.keys.length) {
+//     if (this.count < this.keys.length-1) {
 //       let result = {key: this.keys[this.count], value: this.james[this.keys[this.count]], done: false};
 //       this.count++;
 //       return result;
 //     } else {
-//       return {done:true};
-//     }
+//       let result = {key: this.keys[this.count], value: this.james[this.keys[this.count]], done: true};
+//       this.count++;
+//       return result;//     }
 //   }
 // };
 
@@ -55,12 +56,14 @@ const james = {
       let count = 0;
       return {
         next: ()=>{
-          if (count < keys.length) {
+          if (count < keys.length-1) {
             let result = {key: keys[count], value: this[keys[count]], done: false};
             count++;
             return result;
           } else {
-            return {done:true};
+            let result = {key: keys[count], value: this[keys[count]], done: true};
+            count++;
+            return result;
           }
         }
       }
