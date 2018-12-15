@@ -40,7 +40,7 @@ let iterator = {
   }
 };
 
-console.log(iterator.next()); // 185
-console.log(iterator.next()); // `5'10`
-console.log(iterator.next()); // 185
-console.log(iterator.next()); // 185
+// console.log(iterator.next()); // 185
+// console.log(iterator.next()); // `5'10`
+// console.log(iterator.next()); // 185
+// console.log(iterator.next()); // 185
