@@ -51,9 +51,8 @@ let iterator = {
   count:0,
 
   next: function () {
-    var key;
      if (true) {
-        return {key:"teste", value: this.james["name"], done: false};
+        return {key: this.keys[this.count++], value: this.james["name"], done: false};
      } else {
         return {done:true};
      }
@@ -61,7 +60,6 @@ let iterator = {
 };
 // console.log(james.count);
 // const jamesKeys = Object.keys(iterator.james);
-console.log(iterator.keys); // 'James'
 console.log(iterator.next()); // 185
 console.log(iterator.next()); // `5'10`
 console.log(iterator.next()); // 185
