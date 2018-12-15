@@ -46,7 +46,7 @@
 // console.log(iterator.next()); // `5'10`
 // console.log(iterator.next()); // 185
 // console.log(iterator.next()); // 185
-// ===================================================================="
+// ===============WITH SYMBOL ITERATOR====================================================="
 const james = {
     name: 'James',
     height: `5'10"`,
@@ -75,4 +75,5 @@ console.log(iterator.next()); // `5'10`
 console.log(iterator.next()); // `5'10`
 console.log(iterator.next()); // 185
 console.log(iterator.next()); // 185
+
 // =========================================================================
