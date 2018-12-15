@@ -17,30 +17,59 @@
  *   - You can access the original object using `this`.
  *   - To access the values of the original object, use `this` and the key from the `Object.keys()` array.
  */
+// ============="SOLUTION WITHOT SYMBOL ITERATOR==============================="
+// const james = {
+//     name: 'James',
+//     height: `5'10"`,
+//     weight: 185,
 
-const james = {
-    name: 'James',
-    height: `5'10"`,
-    weight: 185
-};
+// };
 
-let iterator = {
-  james: james,
-  keys: Object.keys(james),
-  count:0,
+// let iterator = {
+//   james: james,
+//   keys: Object.keys(james),
+//   count:0,
 
-  next: function () {
-    if (this.count < this.keys.length) {
-      let result = {key: this.keys[this.count], value: this.james[this.keys[this.count]], done: false};
-      this.count++;
-      return result;
-    } else {
-      return {done:true};
-    }
-  }
-};
+//   next: function () {
+//     if (this.count < this.keys.length) {
+//       let result = {key: this.keys[this.count], value: this.james[this.keys[this.count]], done: false};
+//       this.count++;
+//       return result;
+//     } else {
+//       return {done:true};
+//     }
+//   }
+// };
 
 // console.log(iterator.next()); // 185
 // console.log(iterator.next()); // `5'10`
 // console.log(iterator.next()); // 185
 // console.log(iterator.next()); // 185
+// ===================================================================="
+const james = {
+    name: 'James',
+    height: `5'10"`,
+    weight: 185,
+    [Symbol.iterator](){
+      let keys =  Object.keys(this);
+      let count = 0;
+      return {
+        next: ()=>{
+          if (count < keys.length) {
+            let result = {key: keys[count], value: this[keys[count]], done: false};
+            count++;
+            return result;
+          } else {
+            return {done:true};
+          }
+        }
+      }
+    }
+};
+
+let iterator = james[Symbol.iterator]()
+console.log(iterator.next()); // `5'10`
+console.log(iterator.next()); // `5'10`
+console.log(iterator.next()); // 185
+console.log(iterator.next()); // 185
+// =========================================================================
