@@ -40,6 +40,7 @@ james[Symbol.iterator] = function* () {
 
 // console.log([Symbol.iterator]);
 // console.log(iterator);
+const iterator = james[Symbol.iterator]();
 console.log(iterator.next().value); // 'James'
 console.log(iterator.next().value); // `5'10`
 console.log(iterator.next().value); // 185
@@ -56,7 +57,7 @@ console.log(iterator.next().value); // 185
 //        }
 //     };
 // };
-// const iterator = james[Symbol.iterator]();
 // console.log(james.count);
+// const iterator = james[Symbol.iterator]();
 // console.log(iterator.next()); // `5'10`
 // console.log(iterator.next()); // 185
