@@ -23,45 +23,24 @@ const james = {
     height: `5'10"`,
     weight: 185
 };
-// console.log(typeof james)
-
-// console.log(jamesKeys);
-
-// james[Symbol.iterator] = function* () {
-//     var key;
-//     for (key in this) {
-//         yield this[key];
-//     }
-// };
-// console.log(typeof james[Symbol.iterator])
-
-
-
-// console.log([Symbol.iterator]);
-// console.log(iterator);
-// const iterator = james[Symbol.iterator]();
 
 let iterator = {
-  james: {
-      name: 'James',
-      height: `5'10"`,
-      weight: 185
-  },
+  james: james,
   keys: Object.keys(james),
   count:0,
 
   next: function () {
-     if (true) {
-        return {key: this.keys[this.count++], value: this.james["name"], done: false};
-     } else {
-        return {done:true};
-     }
- }
+    if (this.count < this.keys.length) {
+      let result = {key: this.keys[this.count], value: this.james[this.keys[this.count]], done: false};
+      this.count++;
+      return result;
+    } else {
+      return {done:true};
+    }
+  }
 };
-// console.log(james.count);
-// const jamesKeys = Object.keys(iterator.james);
+
 console.log(iterator.next()); // 185
 console.log(iterator.next()); // `5'10`
 console.log(iterator.next()); // 185
 console.log(iterator.next()); // 185
-  // jamesKeys: this.james.keys,
