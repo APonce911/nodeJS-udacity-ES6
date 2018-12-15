@@ -47,7 +47,7 @@ let iterator = {
       height: `5'10"`,
       weight: 185
   },
-  keys: Object.keys(this.james),
+  keys: Object.keys(james),
   count:0,
 
   next: function () {
