@@ -10,6 +10,13 @@
  * Use the `.add()` method to add the `flavor1` object (again!) to the `uniqueFlavors` set
  */
 const uniqueFlavors = new WeakSet();
-const flavor1 = new Object(flavor:'chocolate');
-const flavor2 = new Object(flavor:'mango');
+const flavor1 = new Object({flavor:'chocolate'});
+const flavor2 = new Object({flavor:'mango'});
+uniqueFlavors.add(flavor1);
+uniqueFlavors.add(flavor2);
+uniqueFlavors.add(flavor1);
 
+// console.log(typeof uniqueFlavors);
+console.log(uniqueFlavors.values());
+// console.log(typeof flavor2);
+// console.log(flavor2);
