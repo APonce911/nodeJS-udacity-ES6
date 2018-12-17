@@ -9,3 +9,4 @@
  * Use the `.add()` method to add the objects `flavor1` and `flavor2` to `uniqueFlavors`
  * Use the `.add()` method to add the `flavor1` object (again!) to the `uniqueFlavors` set
  */
+const uniqueFlavors = new WeakSet();
