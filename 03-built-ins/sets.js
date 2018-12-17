@@ -16,4 +16,6 @@ myFavoriteFlavors.add('cookies and cream');
 myFavoriteFlavors.add('strawberry');
 myFavoriteFlavors.add('vanilla');
 
-// myFavoriteFlavors.values();
+myFavoriteFlavors.delete('strawberry')
+
+console.log(myFavoriteFlavors.values());
