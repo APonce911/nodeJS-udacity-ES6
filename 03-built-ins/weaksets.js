@@ -17,6 +17,7 @@ uniqueFlavors.add(flavor2);
 uniqueFlavors.add(flavor1);
 
 // console.log(typeof uniqueFlavors);
-console.log(uniqueFlavors[0]);
+console.log(uniqueFlavors);
+
 // console.log(typeof flavor2);
 // console.log(flavor2);
