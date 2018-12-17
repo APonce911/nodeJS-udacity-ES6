@@ -9,3 +9,6 @@
  *
  * Then use the `.delete()` method to remove "strawberry" from the set.
  */
+const myFavoriteFlavors = new Set();
+
+
