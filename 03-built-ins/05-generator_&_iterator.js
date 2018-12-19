@@ -6,7 +6,9 @@ function* createSundae() {
     // console.log("post toppings array definition")
     // console.log(toppings);
     // yield
-    toppings.push(yield);
+    console.log(y)
+    const y = yield
+    toppings.push(y);
     // console.log(toppings);
     toppings.push(yield);
     toppings.push(yield);
@@ -16,6 +18,6 @@ function* createSundae() {
 
 var it = createSundae();
 console.log(it.next('hot fudge'));
-console.log(it.next('sprinkles'));
-console.log(it.next('whipped cream'));
-console.log(it.next());
+// console.log(it.next('sprinkles'));
+// console.log(it.next('whipped cream'));
+// console.log(it.next());
