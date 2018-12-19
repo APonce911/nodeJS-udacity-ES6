@@ -2,9 +2,9 @@ function* getEmployee() {
     const names = ['Amanda', 'Diego', 'Farrin', 'James', 'Kagure', 'Kavita', 'Orit', 'Richard'];
     const facts = [];
 
-    for (const name of names) {
+    for (const z of names) {
         // yield *out* each name AND store the returned data into the facts array
-        facts.push(yield name);
+        facts.push(yield z);
     }
 
     return facts;
