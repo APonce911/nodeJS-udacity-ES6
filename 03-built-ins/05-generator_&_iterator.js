@@ -7,7 +7,6 @@ function* createSundae() {
     // console.log(toppings);
     // yield
     toppings.push(yield);
-    // console.log(toppings);
     toppings.push(yield);
     toppings.push(yield);
 
