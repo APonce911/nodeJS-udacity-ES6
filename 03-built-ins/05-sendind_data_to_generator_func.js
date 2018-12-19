@@ -13,27 +13,27 @@ function* getEmployee() {
 const generatorIterator = getEmployee();
 
 // get the first name out of the generator
-let xy = generatorIterator.next().value;
+let name = generatorIterator.next().value;
 
-// pass data in *and* get the next xy
-xy = generatorIterator.next(`${xy} is cool!`).value;
+// pass data in *and* get the next name
+name = generatorIterator.next(`${name} is cool!`).value;
 
-// pass data in *and* get the next xy
-xy = generatorIterator.next(`${xy} is awesome!`).value;
+// pass data in *and* get the next name
+name = generatorIterator.next(`${name} is awesome!`).value;
 
-// pass data in *and* get the next xy
-xy = generatorIterator.next(`${xy} is stupendous!`).value;
+// pass data in *and* get the next name
+name = generatorIterator.next(`${name} is stupendous!`).value;
 
 // you get the idea
-xy = generatorIterator.next(`${xy} is rad!`).value;
-xy = generatorIterator.next(`${xy} is impressive!`).value;
-xy = generatorIterator.next(`${xy} is stunning!`).value;
-xy = generatorIterator.next(`${xy} is awe-inspiring!`).value;
+name = generatorIterator.next(`${name} is rad!`).value;
+name = generatorIterator.next(`${name} is impressive!`).value;
+name = generatorIterator.next(`${name} is stunning!`).value;
+name = generatorIterator.next(`${name} is awe-inspiring!`).value;
 
 // pass the last data in, generator ends and returns the array
-const positions = generatorIterator.next(`${xy} is magnificent!`).value;
+const positions = generatorIterator.next(`${name} is magnificent!`).value;
 
-// displays each xy with description on its own line
+// displays each name with description on its own line
 positions.join('\n');
 
 console.log(positions)
